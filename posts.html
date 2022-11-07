@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dashboard</title>
+</head>
+<body>
+<div class="container">
+	<h1><center>ALL THE POSTS</center></h1>
+	<div class="container">
+	<h3><center>The list of all posts made by various users</center></h3>
+
+
+	</div>
+<div>
+
+{% for post in posts %}
+
+
+
+
+<h5>
+{{post.title}}
+</h5>
+
+
+<p>Written by {{post.author}} on {{post.create_date}}</p>
+
+<a href="post/{{post.id}}" class="btn btn-sm btn-info">Read More</a>
+
+
+{% endfor %}
+
+
+</div>
+<br><br><br><br>
+
+</div>
+</body>
+</html>
+
+{% endblock %}
